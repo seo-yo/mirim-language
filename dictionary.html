@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<title>전체 사전 — 미림어 사전</title>
+</head>
+<body data-page="dictionary">
+<main class="wrap">
+  <section class="page-head">
+    <p class="eyebrow">Mirim Dictionary / All Words</p>
+    <h1 class="page-title" id="title">전체 사전</h1>
+  </section>
+  <form class="search" action="dictionary.html" method="get" role="search">
+    <span class="search__label">한국어 ↔ 미림어</span>
+    <input class="search__input" id="search-input" type="text" name="q" placeholder="한국어나 미림어 표현을 찾아보세요" autocomplete="off">
+    <button class="btn btn--primary" type="submit"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>검색</button>
+  </form>
+  <div class="dict-tools">
+    <div class="chips" id="index"></div>
+    <div class="chips" id="sort">
+      <button type="button" data-sort="ko" class="is-on">가나다순</button>
+      <button type="button" data-sort="new">최신순</button>
+    </div>
+  </div>
+  <p class="dict-count" id="count"></p>
+  <ol class="word-list" id="list"></ol>
+  <p class="empty" id="empty" hidden>아직 없는 말이에요. <a id="empty-add" href="add.html">직접 등록해 볼까요? →</a></p>
+</main>
+<script type="module" src="js/pages/dictionary.js"></script>
+</body>
+</html>

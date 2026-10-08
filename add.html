@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<title>말 등록하기 — 미림어 사전</title>
+</head>
+<body data-page="add">
+<main class="wrap">
+  <section class="page-head">
+    <p class="eyebrow">Mirim Dictionary / New Word</p>
+    <h1 class="page-title" id="form-title">말 등록하기</h1>
+    <p class="page-sub">로그인 없이 누구나 올릴 수 있어요. 비밀번호만 기억해 두세요.</p>
+  </section>
+  <div class="add-grid">
+    <form class="form" id="form" novalidate>
+      <p class="form__error" id="error" hidden></p>
+      <label>미림어 표현 *
+        <input name="mirim" maxlength="40" required placeholder="뚜위를 출꼬">
+      </label>
+      <p class="form__note" id="dup" hidden></p>
+      <label>한국어 뜻 *
+        <input name="korean" maxlength="60" required placeholder="추위를 뚫고">
+      </label>
+      <label>실제로 한 말
+        <textarea name="example" maxlength="200" placeholder="뚜위를 출꼬 왔어."></textarea>
+      </label>
+      <label>어떤 상황이었나요
+        <textarea name="note" maxlength="300" placeholder="추위를 헤치고 왔다는 뜻으로 받아들이면 돼요."></textarea>
+      </label>
+      <label>채집한 사람
+        <input name="author" maxlength="20" placeholder="선택">
+      </label>
+      <label>비밀번호 4자리 *
+        <input name="pin" inputmode="numeric" maxlength="4" pattern="\d{4}" required autocomplete="off" placeholder="0000">
+        <small id="pin-help">고치거나 지울 때 필요해요</small>
+      </label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn--primary" type="submit" id="submit">사전에 올리기</button>
+    </form>
+    <aside class="preview">
+      <p class="eyebrow">Preview</p>
+      <div class="card" id="preview"></div>
+    </aside>
+  </div>
+</main>
+<script type="module" src="js/pages/add.js"></script>
+</body>
+</html>
